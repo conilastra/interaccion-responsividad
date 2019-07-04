@@ -45,7 +45,7 @@ nav ul li {
 
 .bi-button:hover {
     border: 1px solid white;
-    box-shadow: 2px 5px 18px #3D4751;
+    box-shadow: -9px 7px 5px #3D475154;
     background: none;
-    transform: translate(10px)
+    transform: translate(5px)
 }
