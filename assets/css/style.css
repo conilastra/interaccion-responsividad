@@ -21,3 +21,31 @@ nav ul li {
     padding-left: 1em;
 }
 
+/* ejercicio 2  */
+
+.background {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #7494E0, #C86085)
+}
+
+.bi-button {
+    background: #3D4751;
+    border: none;
+    color: white;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 1.5em 3em;  
+    position: absolute;
+    transition: all .5s;
+}
+
+.bi-button:hover {
+    border: 1px solid white;
+    box-shadow: 2px 5px 18px #3D4751;
+    background: none;
+    transform: translate(10px)
+}
