@@ -58,7 +58,7 @@ nav ul li {
 /* ejercicio 3  */
 /* base*/
 body {
-    background: #2b2828;
+    background: #f3e9d9;
 }
 
 main {
@@ -175,10 +175,10 @@ main {
 }
 
 .woman {
+    top: 37px;
     height: 150px;
-    left: 900px;
-    position: relative;
-    top: 49px; 
+    left: 800px;
+    position: relative;   
 }
 
 
