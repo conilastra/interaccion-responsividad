@@ -12,7 +12,6 @@ header {
     justify-content: space-between;
     padding: 1rem 3rem;
     width: 100vw;
-
 }
 
 .logo {
@@ -57,53 +56,22 @@ nav ul li {
 }
 
 /* ejercicio 3  */
-.sky {
-    height: 64.3vh;
-    max-width: 100vw;
-    background: #68bde3;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    padding: 2rem 10vw;
+/* base*/
+body {
+    background: #2b2828;
 }
 
+main {
+    margin: auto;
+}
+
+/* colors */
 .sky-color {
     fill:  #6cb6d7;
 }
 
-.sun {
-    height: 20vh;
-}
 
-.sand {
-    height: 27vh;
-    max-width: 100vw;
-    background: #f3e9d9;
-}
-
-.palm-tree {
-    height: 20vh;
-    position: relative;
-    top: 16vh;
-    left: 39vw;
-}
-
-.ball {
-    position: relative;
-    float: right;
-    height: 16vh;
-    right: 10vw;
-    top: 6vh;
-}
-
-.umbrella {
-    height: 18vh;
-    position: relative;
-    bottom: 10px;
-    left: -4vw;
-    animation-name: move-right;
-    animation-duration: 4s;
-}
-
+/* fonts */
 .title {
     font-size: 50px;
     font-weight: 700;
@@ -114,23 +82,126 @@ nav ul li {
     font-weight: 300;
 }
 
-.woman {
+
+/* elements */
+.ball {
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: move-left;
+    float: right;
+    height: 120px;
     position: relative;
-    top: 6vh;
-    height: 21vh;
-    left: 60vw;
+    right: -200px;
+    top: 42px;
 }
 
-.yellow {
-    fill: #fff666;
+.palm-tree {
+    height: 150px;
+    left: 575px;
+    position: relative;
+    top: 110px;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: slowly-appear;
 }
 
-.yellowish {
-    fill: #ffd640;
+.palm-tree-stem {
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: not-so-slowly-appear;
 }
 
+.petals-r {
+    animation-name: slowly-fill-r;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    fill: #f3e9d9;
+}
+
+.petals-l {
+    animation-name: slowly-fill-l;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    fill: #f3e9d9;
+}
+
+.umbrella {
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: move-right;
+    bottom: 30px;
+    height: 130px;
+    left: -200px;
+    position: relative;
+}
+
+.sand {
+    background: #f3e9d9;
+    height: 27vh;
+    width: 100vw;
+}
+
+.sky {
+    background: #68bde3;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    height: 485px;
+    width: 100vw;
+    padding: 20px 145px;
+}
+
+.sun {
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: slowly-appear;
+    height: 170px;
+}
+
+.woman {
+    height: 150px;
+    left: 900px;
+    position: relative;
+    top: 49px; 
+}
+
+
+/* animations */
 @keyframes move-right {
-    0% { left: -4vw;}
-    100% { left: 4vw;}
+    0% { left: -200px;}
+    50% { left: 70px;}
+    100% { left: 70px;}
 }
 
+@keyframes move-left {
+    0% { right: -200px;}
+    50% { right: 150px;}
+    100% { right: 150px;}
+}
+
+@keyframes not-so-slowly-appear {
+    0% { opacity: 0;}
+    30% { opacity: 1;}
+    100% { opacity: 1;}
+}
+
+@keyframes slowly-appear {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@keyframes slowly-fill-r {
+    0% { fill: #fff666; opacity: 0;}
+    100% { fill: #fff666; opacity: 1;}
+}
+
+@keyframes slowly-fill-l {
+    0% { fill: #ffd640; opacity: 0;}
+    100% { fill: #ffd640; opacity: 1;}
+}
