@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 
@@ -8,10 +8,13 @@
 
 header {
     border: 1px solid black;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1rem 3rem;
-    width: 100vw;
 }
 
 .logo {
@@ -29,10 +32,19 @@ nav ul li {
 /* ejercicio 2  */
 
 .background {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: -webkit-gradient(linear, left top, right top, from(#7494E0), to(#C86085));
+    background-image: -webkit-linear-gradient(left, #7494E0, #C86085);
+    background-image: -o-linear-gradient(left, #7494E0, #C86085);
     background-image: linear-gradient(to right, #7494E0, #C86085)
 }
 
@@ -45,25 +57,22 @@ nav ul li {
     font-weight: bold;
     padding: 1.5em 3em;  
     position: absolute;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
 .bi-button:hover {
     border: 1px solid white;
-    box-shadow: -9px 7px 5px #3D475154;
+    -webkit-box-shadow: -9px 7px 5px #3D475154;
+            box-shadow: -9px 7px 5px #3D475154;
     background: none;
-    transform: translate(5px)
+    -webkit-transform: translate(5px);
+        -ms-transform: translate(5px);
+            transform: translate(5px)
 }
 
 /* ejercicio 3  */
-/* base*/
-body {
-    background: #f3e9d9;
-}
-
-main {
-    margin: auto;
-}
 
 /* colors */
 .sky-color {
@@ -83,116 +92,161 @@ main {
 }
 
 .title, .subtitle {
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: not-so-slowly-appear;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: not-so-slowly-appear;
+            animation-name: not-so-slowly-appear;
     opacity: 0;
 }
 
 
 /* elements */
 .ball {
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: move-left;
-    float: right;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: move-left;
+            animation-name: move-left;
     height: 120px;
-    position: relative;
-    right: -200px;
-    top: 42px;
+    opacity: 0;
+    
 }
 
 .palm-tree {
     height: 150px;
-    left: 575px;
-    opacity: 0;
-    position: relative;
-    top: 110px;
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: slowly-appear;
+    transform: translate(200px, -68%);
 }
 
-.palm-tree-stem {
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: not-so-slowly-appear;
+.palm-main {
+    opacity: 0;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: slowly-appear;
+            animation-name: slowly-appear;
 }
+
+
+.palm-stem {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: quick-fill;
+            animation-name: quick-fill;
+            animation-timing-function: ease-out;
+            opacity: 0;
+}
+
 
 .petals-r {
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: slowly-fill-r;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: slowly-fill-r;
+            animation-name: slowly-fill-r;
     fill: #f3e9d9;
 }
 
 .petals-l {
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: slowly-fill-r;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: slowly-fill-r;
+            animation-name: slowly-fill-r;
     fill: #f3e9d9;
 }
 
 .umbrella {
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: move-right;
-    bottom: 30px;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: move-right;
+            animation-name: move-right;
     height: 130px;
-    left: -200px;
-    position: relative;
+    opacity: 0;
 }
 
 .sand {
     background: #f3e9d9;
-    height: 27vh;
-    width: 100vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sky {
     background: #68bde3;
     color: white;
     font-family: 'Roboto', sans-serif;
-    height: 485px;
-    width: 100vw;
-    padding: 20px 145px;
+    padding: 20px 145px 145px 145px;
 }
 
 .sun {
-    animation-delay: 2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: slowly-appear;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: slowly-appear;
+            animation-name: slowly-appear;
     height: 170px;
     opacity: 0;
 }
 
 .woman {
-    top: 37px;
-    height: 150px;
-    left: 800px;
-    position: relative;   
+    height: 150px; 
+    transform: translateX(50%); 
 }
 
 
 /* animations */
+@-webkit-keyframes move-right {
+    0% { opacity: 0;}
+    20% { transform: translate(80%); opacity: 1;}
+    100% { transform: translate(80%); opacity: 1;}
+}
 @keyframes move-right {
-    0% { left: -200px;}
-    20% { left: 70px;}
-    100% { left: 70px;}
+    0% { opacity: 0;}
+    20% { transform: translate(80%); opacity: 1;}
+    100% { transform: translate(80%); opacity: 1;}
+}
+
+@-webkit-keyframes move-left {
+    0% { opacity: 0;}
+    20% { transform: translate(-250%); opacity: 1;}
+    100% { transform: translate(-250%); opacity: 1;}
 }
 
 @keyframes move-left {
-    0% { right: -200px;}
-    20% { right: 150px;}
-    100% { right: 150px;}
+    0% { opacity: 0;}
+    20% { transform: translate(-250%); opacity: 1;}
+    100% { transform: translate(-250%); opacity: 1;}
+}
+
+@-webkit-keyframes appear {
+    0% { display: none;}
+    100% { display: block;}
 }
 
 @keyframes appear {
@@ -200,8 +254,19 @@ main {
     100% { display: block;}
 }
 
+@-webkit-keyframes slowly-appear {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
 @keyframes slowly-appear {
     0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@-webkit-keyframes not-so-slowly-appear {
+    0% { opacity: 0;}
+    30% { opacity: 1;}
     100% { opacity: 1;}
 }
 
@@ -211,12 +276,27 @@ main {
     100% { opacity: 1;}
 }
 
+@-webkit-keyframes slowly-fill-r {
+    0% { fill: #fff666; opacity: 0;}
+    100% { fill: #fff666; opacity: 1;}
+}
+
 @keyframes slowly-fill-r {
     0% { fill: #fff666; opacity: 0;}
     100% { fill: #fff666; opacity: 1;}
 }
 
+@-webkit-keyframes slowly-fill-l {
+    0% { fill: #ffd640; opacity: 0;}
+    100% { fill: #ffd640; opacity: 1;}
+}
+
 @keyframes slowly-fill-l {
     0% { fill: #ffd640; opacity: 0;}
     100% { fill: #ffd640; opacity: 1;}
+}
+
+@keyframes quick-fill {
+    0% { fill: #805333; opacity: 0;}
+    100% { fill: #805333; opacity: 1;}
 }
